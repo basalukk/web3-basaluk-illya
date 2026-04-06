@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Варіант 3</title>
+</head>
+<body>
+
+<h2>Варіант 3 — Паралельно і послідовно</h2>
+<p>Відкрий консоль (F12)</p>
+
+<script>
+
+function fetchData(id) {
+    return new Promise((resolve) => {
+        const delay = Math.floor(Math.random() * 2000) + 1000;
+
+        setTimeout(() => {
+            resolve(`Дані для ID ${id} отримані за ${delay} мс`);
+        }, delay);
+    });
+}
+
+
+async function processData() {
+    console.log("=== Паралельні запити ===");
+
+
+    const parallelResults = await Promise.all([
+        fetchData(1),
+        fetchData(2),
+        fetchData(3)
+    ]);
+
+    console.log(parallelResults);
+
+    console.log("=== Послідовні запити ===");
+
+ 
+    const ids = [4, 5, 6];
+
+    for (const id of ids) {
+        const result = await fetchData(id);
+        console.log(result);
+    }
+}
+
+
+processData();
+</script>
+
+</body>
+</html>
