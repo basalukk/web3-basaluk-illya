@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let integerNumber = 10;
+let floatNumber = 5.5;
+let text = "Hello";
+let isTrue = true;
+
+console.log("integerNumber:", integerNumber, "type:", typeof integerNumber);
+console.log("floatNumber:", floatNumber, "type:", typeof floatNumber);
+console.log("text:", text, "type:", typeof text);
+console.log("isTrue:", isTrue, "type:", typeof isTrue);
+
+integerNumber = 20;
+floatNumber = 7.25;
+text = "JavaScript";
+isTrue = false;
+
+console.log("After change:");
+
+console.log("integerNumber:", integerNumber, "type:", typeof integerNumber);
+console.log("floatNumber:", floatNumber, "type:", typeof floatNumber);
+console.log("text:", text, "type:", typeof text);
+console.log("isTrue:", isTrue, "type:", typeof isTrue);
+
+let result1 = integerNumber + text;
+
+console.log("Number + String:", result1);
+console.log("Type:", typeof result1);
+
+
+let trueToNumber = Number(true);
+let falseToNumber = Number(false);
+
+console.log("true -> number:", trueToNumber);
+console.log("false -> number:", falseToNumber);
+
+let stringToNumber = Number("100");
+
+console.log("String to number:", stringToNumber);
+console.log("Type:", typeof stringToNumber);
+
+
+let person = {
+    name: "masuk",
+    age: 12,
+    height: 1.38,
+    student: true
+};
+
+
+
+console.log("Object:", person);
+
+
+let jsonPerson = JSON.stringify(person);
+
+console.log("JSON format:", jsonPerson);
+    </script>
+</body>
+</html>
