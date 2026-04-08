@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична робота JS</title>
+</head>
+<body>
+
+<script>
+
+let age = Number(prompt("Введіть ваш вік:"));
+
+if (age < 18) {
+    alert("Вам заборонено вхід");
+} else if (age <= 65) {
+    alert("Ласкаво просимо!");
+} else {
+    alert("Будь ласка, будьте обережні!");
+}
+
+let n1 = Number(prompt("Введіть число n:"));
+let evenNumbers = "";
+
+for (let i = 2; i <= n1; i++) {
+    if (i % 2 === 0) {
+        evenNumbers += i + " ";
+    }
+}
+
+alert("Парні числа: " + evenNumbers);
+
+
+let n2 = Number(prompt("Введіть число для факторіалу:"));
+let factorial = 1;
+let i = 1;
+
+while (i <= n2) {
+    factorial = i;
+    i++;
+}
+
+alert("Факторіал: " + factorial);
+
+
+
+let a = Number(prompt("Введіть перше число:"));
+let b = Number(prompt("Введіть друге число:"));
+let operation = prompt("Введіть операцію (+, -,, /):");
+
+let result;
+
+switch (operation) {
+    case "+":
+        result = a + b;
+        break;
+    case "-":
+        result = a - b;
+        break;
+    case "*":
+        result = a * b;
+        break;
+    case "/":
+        result = b === 0 ? "Ділення на 0 неможливе!" : a / b;
+        break;
+    default:
+        result = "Невідома операція!";
+}
+
+alert("Результат: " + result);
+
+
+
+let secret = Math.floor(Math.random() * 100) + 1;
+let guess;
+
+do {
+    guess = Number(prompt("Вгадайте число від 1 до 100:"));
+
+    if (guess < secret) {
+        alert("Загадане число більше");
+    } else if (guess > secret) {
+        alert("Загадане число менше");
+    } else {
+        alert("Вітаємо! Ви вгадали число!");
+    }
+
+} while (guess !== secret);
+
+</script>
+
+</body>
+</html>
